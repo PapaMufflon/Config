@@ -1,0 +1,22 @@
+[user]
+	name = Tobias Walter
+	email = tobias.walter@gmx.net
+[core]
+	autocrlf = true
+[merge]
+	tool = p4merge
+[mergetool "p4merge"]
+	cmd = p4merge.exe \"$BASE\" \"$LOCAL\" \"$REMOTE\" \"$MERGED\"
+[alias]
+	g = log --graph --full-history --all --color --pretty=tformat:"%x1b[31m%h%x09%x1b[32m%d%x1b[0m%x20%s%x20%x1b[33m(%an)%x1b[0m"
+	m = merge --no-ff
+	c = "!git add -A && git commit -m"
+	co = checkout
+	b = branch
+	cb = checkout -b
+	ba = "!git fetch && for branch in `git branch -r | grep -v HEAD`;do echo -e `git show --format='%ci %cr %cn' $branch | head -n 1` $branch; done | sort -r"
+	s = status
+	d = diff
+	dc = checkout -- .
+[push]
+	default = simple
