@@ -1,0 +1,25 @@
+dir
+e:
+cd src
+git
+cd StandUpTimer\
+git d
+git config
+git config --global --edit
+e:
+cd src
+cd StandUpTimer\
+git config
+git config --system --edit
+git d
+e:
+cd src
+cd StandUpTimer\
+git d
+git c "show creative commons"
+git push
+git status
+cd ..
+dir
+e:
+cd src
