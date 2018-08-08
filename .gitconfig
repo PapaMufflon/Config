@@ -18,5 +18,6 @@
 	s = status
 	d = diff
 	dc = checkout -- .
+	up = "!git remote update -p; git merge --ff-only @{u}"
 [push]
 	default = simple
